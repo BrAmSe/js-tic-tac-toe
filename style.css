@@ -1,0 +1,53 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-height: 95vh;
+}
+
+.cell {
+  display:flex;
+  padding: 10px;
+  align-content: center;
+  justify-content: center;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  &:nth-child(3n+1){
+    border-left: none;
+  }
+  &:nth-child(-n+3){
+    border-top:none;
+  }
+}
+.game-wrapper {
+  display:flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+.grid-wrapper {
+  height: 60vh;
+  width: 60vw;
+  align-content: center;
+  justify-content: center;
+  display: grid;
+  grid-template: "upper-left upper-center upper-right" auto
+                 "middle-left middle-center middle-right" auto
+                 "bottom-left bottom-center bottom-right" auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
