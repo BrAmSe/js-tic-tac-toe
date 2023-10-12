@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/cross.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TIC TAC TOE</title>
   </head>
-  <body>
-    <h1>TIC TAC TOE</h1>
+  <body>  
+    <h1 class="title">TIC TAC TOE</h1>
+    <div class="overlay-text visible">
+      Click to Start
+    </div>
+    <div id="you-loose-text" class="overlay-text">
+      You loose! Try again!
+    </div>
+    <div id="you-win-text" class="overlay-text">
+      You are the winner!
+    </div>
+    <div id="its-a-draw-text" class="overlay-text">
+      It's a draw. Try again!
+    </div>
     <main class="game-wrapper">
       <div class="grid-wrapper">
         <div id="cell-0-0" class="cell" data-row="0" data-col="0"></div>

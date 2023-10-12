@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nanum Brush Script', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,8 +13,37 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
-  min-height: 95vh;
+  min-height: 90vh;
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  opacity: 0.90;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+  font-size: 8em;
+}
+
+.title {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 6em;
 }
 
 .cell {
@@ -33,13 +62,13 @@ body {
 }
 .game-wrapper {
   display:flex;
-  height: 90vh;
+  height: 50vh;
   align-items: center;
   justify-content: center;
 }
 .grid-wrapper {
   height: 60vh;
-  width: 60vw;
+  width: 40vw;
   align-content: center;
   justify-content: center;
   display: grid;
